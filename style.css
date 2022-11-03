@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
@@ -248,7 +252,8 @@ section.services .services-content .services-items .services-item p{
 
 section.projects .projects-content{
     width: 80%;
-    margin: 30px auto;
+    margin: 0 auto;
+    padding: 60px 0;
 }
 section.projects .projects-content .projects-heading{
     text-align: center;
@@ -257,7 +262,7 @@ section.projects .projects-content .projects-heading{
 section.projects .projects-content .projects-items{
     display: grid;
     grid-template-rows: repeat(5,1fr);
-    margin: 50px;
+    margin: 30px 50px;
 }
 
 section.projects .projects-content .projects-items .projects-item{
@@ -335,7 +340,8 @@ section.about-me .about-container{
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 80px;
-    margin: 250px auto;
+    margin: 0 auto;
+    padding: 100px 0;
 }
 
 section.about-me .about-container .about-img-content{
@@ -393,8 +399,9 @@ section.about-me .about-container .about-text-content .button:hover{
 
 section.contact .contact-container{
     width: 75%;
-    margin: 250px auto;
+    margin: 150px auto;
     text-align: center;
+    padding: 20px 0;
 }
 
 section.contact .contact-container .contact-content{
@@ -678,7 +685,36 @@ footer .footer-container p{
         outline: 10px solid white; */
     }
 }
+@media only screen and (max-width: 980px){
+    section.projects .projects-content{
+        margin: 0 auto;
+        padding: 50px 0;
+    }
 
+    section.projects .projects-content .projects-heading h2{
+        font-size: 3rem;
+    }
+
+    section.about-me .about-container{
+        width: 82%;
+        /* display: grid; */
+        /* grid-template-columns: repeat(3,1fr); */
+        gap: 0;
+        margin: 0 auto;
+        padding: 70px 0;
+    }
+    section.contact .contact-container .contact-content{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px !important;
+    }
+    section.contact .contact-content .contact-card img{
+        width: 50%;
+    }
+    footer .footer-container h2{
+        font-size: 1.6rem;
+    }
+}
 @media only screen and (max-width: 768px) {
     
 
@@ -738,7 +774,7 @@ footer .footer-container p{
 
     section.projects .projects-content{
         width: 100%;
-        margin: 0
+        margin: 0 auto;
     }
 
     section.projects .projects-content .projects-items{
@@ -773,6 +809,7 @@ footer .footer-container p{
         width: 100%;
         margin: 0 auto !important;
         gap: 0;
+        padding: 0;
         
     }
     section.about-me .about-container .about-img-content{
@@ -814,7 +851,8 @@ footer .footer-container p{
     }
 
     section.contact .contact-container{
-        margin: 50px auto;
+        margin: 0 auto;
+        padding: 100px 0;
         
     }
     section.contact .contact-content .contact-card img{
@@ -822,7 +860,7 @@ footer .footer-container p{
     }
 
     section.contact .contact-container h2{
-        margin-top: 150px;
+        margin-top: 0;
     }
 
     section.contact .contact-container .contact-content{
@@ -840,7 +878,7 @@ footer .footer-container p{
     }
 
     footer .footer-container h3{
-        font-size: 1rem4;
+        font-size: 1rem;
         margin: 20px 0;
     }
     
@@ -875,10 +913,22 @@ footer .footer-container p{
         width: 20%;
     }
 
+    section.projects .projects-content{
+        margin: 0 auto;
+        padding: 70px 0;
+    }
+    section.about-me .about-container{
+        margin: 0 auto !important;
+        padding:0 !important;
+    }
     section.about-me .about-container .about-img-content{
         min-height: 330px !important;
     }
 
+    section.contact .contact-container{
+        margin: 0 auto;
+        padding: 100px 0 !important;
+    }
     section.contact .contact-content .contact-card img{
         width: 70%;
     }
