@@ -1,0 +1,894 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+h2.title{
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+h2.title span{
+    color: crimson;
+}
+
+a.button {
+    background-color: transparent;
+    border: 2px solid crimson;
+    padding: 10px 50px;
+    color: #fff;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin: 50px 0;
+    display: inline-block;
+    font-weight: 400;
+    transition: 0.3s ease;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    min-height: 8vh;
+    display: flex;
+    align-items: center;
+    background-color: rgba(31, 30, 30, 0.24);
+}
+nav .nav-container{
+    padding: 0 5%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .nav-container .nav-brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .nav-container h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: -0.1rem;
+    color: white;
+    cursor: pointer;
+}
+
+nav .nav-container ul{
+    display: flex;
+    flex-direction: row;
+    
+}
+nav .nav-container ul li{
+    margin-left: 40px;
+}
+
+nav .nav-container ul li:hover a{
+    color: crimson;
+}
+
+nav .nav-container ul a{
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 0.15rem;
+    font-size: 400;
+    transition: 0.5s ease;
+}
+
+header {
+    min-height: 100vh;
+	width: 100%;
+    background-image: url(imgs/hero-bg.png);
+    background-position: top center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+header .container{
+    margin: 0 auto;
+    width: 85%;
+}
+
+header::after{
+    content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.7;
+	z-index: -1;
+}
+
+header .header-content{
+margin-top: 150px;
+}
+
+header .header-content h1{
+    font-size: 4rem;
+    color: transparent;
+    width: fit-content;
+    font-weight: 500;
+    display: block;
+    position: relative;
+    animation: text-reveal 0.5s ease forwards;
+    line-height: 4.7rem;
+
+}
+header .header-content h1:nth-child(1){
+    animation-delay: 1s;
+}
+header .header-content h1:nth-child(2){
+    animation-delay: 2s;
+}
+header .header-content h1:nth-child(3){
+    font-size: 4rem;
+    font-weight: 500;
+    letter-spacing: -5px;
+    animation: name-reveal 0.5s ease forwards;
+    animation-delay: 3s;
+}
+header .header-content h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    animation: text-reveal-box 1s ease;
+    background-color: crimson;
+}
+header .header-content h1:nth-child(1) span{
+    animation-delay: 0.5s;
+}
+header .header-content h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+header .header-content h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+
+header .header-content a:hover{
+    color: #fff;
+    background-color: crimson;
+}
+
+section.services .services-content{
+    width: 100%;
+    padding: 90px 30px;
+}
+section.services .services-content .services-heading{
+    width: 35%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section.services .services-content .services-heading p{
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.6rem;
+    letter-spacing: 0.05rem;
+    margin-top: 10px;
+}
+
+section.services .services-content .services-items{
+    margin: 70px 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 50px;
+}
+section.services .services-content .services-items .services-item{
+    grid-column: span 1;
+    background-image: url(imgs/img-1.png);
+    width: 100%;
+    background-size: cover;
+    padding: 30px 30px;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+section.services .services-content .services-items .services-item::after{
+    content: '';
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+section.services .services-content .services-items .services-item .icon img{
+    width: 30%;
+}
+
+section.services .services-content .services-items .services-item h2{
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+section.services .services-content .services-items .services-item p{
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    letter-spacing: 0.03rem;
+    margin-top: 20px;
+    color: #ffffff;
+    text-align: left;
+}
+
+section.projects .projects-content{
+    width: 80%;
+    margin: 30px auto;
+}
+section.projects .projects-content .projects-heading{
+    text-align: center;
+}
+
+section.projects .projects-content .projects-items{
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+    margin: 50px;
+}
+
+section.projects .projects-content .projects-items .projects-item{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+section.projects .projects-content .projects-items .projects-item .project-info{
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    padding: 100px 30px;
+}
+
+section.projects .projects-content .projects-items .project-info h3{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+section.projects .projects-content .projects-items .project-info p{
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    letter-spacing: 0.03rem;
+    color: #ffffff;
+    margin-top: 10px;
+    
+}
+
+section.projects .projects-content .projects-items .project-info p :nth-child(1){
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    
+}
+
+section.projects .projects-content .projects-items .projects-item:nth-child(even){
+    direction: rtl;
+    text-align: left;
+    
+}
+section.projects .projects-content .projects-items .project-img-container{
+    background-color: transparent;
+    display: grid;
+    overflow: hidden;
+}
+section.projects .project-img-container .project-img{
+    background-image: url(imgs/img-1.png);
+    width: 100%;
+    background-position: right center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s ease transform;
+}
+section.projects .projects-item:hover .project-img{
+    transform: scale(1.1);
+}
+section.projects .projects-content .projects-items .projects-item .project-img::after{
+    content: '';
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+section.about-me .about-container{
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 80px;
+    margin: 250px auto;
+}
+
+section.about-me .about-container .about-img-content{
+    grid-column: span 2;
+    background-image: url(imgs/img-2.png);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    outline: 10px solid white;
+}
+
+section.about-me .about-container .about-img-content::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 7%;
+    left: -15%;
+    border: 10px solid crimson;
+    z-index: -1;
+}
+
+section.about-me .about-container .about-text-content{
+    grid-column: span 3;
+}
+
+section.about-me .about-container .about-text-content h3{
+    font-size: 1.2rem;
+    margin: 15px 0;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
+section.about-me .about-container .about-text-content p{
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    letter-spacing: 0.03rem;
+    margin-top: 20px;
+    color: black;
+    text-align: left;
+}
+
+section.about-me .about-container .about-text-content .button{
+    color: black;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+section.about-me .about-container .about-text-content .button:hover{
+    background-color: crimson;
+}
+
+section.contact .contact-container{
+    width: 75%;
+    margin: 250px auto;
+    text-align: center;
+}
+
+section.contact .contact-container .contact-content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+section.contact .contact-container .contact-content .contact-card{
+    padding: 50px 30px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    transition: 0.5s ease;
+    align-items: center;
+    cursor: pointer;
+}
+section.contact .contact-container .contact-content .contact-card:hover{
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+section.contact .contact-content .contact-card img{
+    grid-column: span 1;
+    width: 75%;
+}
+
+section.contact .contact-content .contact-card .contact-text{
+    grid-column: span 2;
+    display: grid;
+    align-items: center;
+    justify-items: left;
+}
+
+section.contact .contact-content .contact-card .contact-text h3{
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+section.contact .contact-content .contact-card .contact-text p{
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.1rem;
+    letter-spacing: 0.03rem;
+    color: black;
+}
+
+footer{
+    background-color: #3f4a57;
+}
+
+footer .footer-container{
+    width: 50%;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 auto;
+}
+footer .footer-container h2{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: -0.03rem;
+    margin: 10px 0;
+}
+
+footer .footer-container h3{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+footer .footer-container .footer-icons-box{
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    width: 30%;
+    margin: 0 auto;
+}
+
+footer .footer-container .footer-icons-box img{
+    width: 100%;
+}
+
+footer .footer-container .footer-icons-box img:hover{
+    filter: blur(1px);
+    cursor: pointer;
+}
+
+footer .footer-container p{
+    color: #ffffff;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    font-weight: 300;
+    margin-top: 30px;
+}
+
+/*==================
+================== */
+@keyframes text-reveal-box{
+    50%{
+        width:100%;
+        left: 0;
+    }
+    100%{
+        width:0;
+        left: 100%;
+    }
+}
+
+@keyframes text-reveal{
+    100%{
+        color: #fff;
+    }
+}
+
+@keyframes name-reveal{
+    100%{
+        color: crimson;
+    }
+}
+
+/*
+==================
+================== */
+@media only screen and (max-width: 1200px){
+    nav .nav-container{
+        width: 100%;
+        /* padding: 5px 20px ; */
+    }
+
+    nav .nav-container h2{
+        font-size: 1.4rem;
+        /* margin-left: 10px; */
+    }
+
+    nav .nav-container ul{
+        width: 100%;
+        height: 100vh;
+        background-color: #29323c;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        transition: 0.5s ease left;
+    }
+
+    nav .nav-container ul.activate{
+        left: 0;
+    }
+    nav .nav-container ul.activate li{
+        border-bottom: 1px solid #9f9f9f;
+        width: 80%;
+        margin: 0 auto;
+        padding: 30px 0;
+        text-align: center;
+    }
+    
+    nav .toggle{
+        display: inline-block;
+        border-radius: 50%;
+        border: 3px solid white;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        transform: scale(0.8);
+        /* margin-right: 10px; */
+        cursor: pointer;
+    }
+
+    nav .toggle span{
+        width: 30px;
+        background-color: white;
+        height: 2px;
+        position: relative;
+    }
+    
+    nav .toggle span::after{
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        top: 8px;
+        left: 0;
+        transition: 0.3s ease top;
+    }
+    nav .toggle span::before{
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        top: -8px;
+        left: 0;
+        transition: 0.3s ease top;
+    }
+
+    nav .toggle.activate span::after{
+        top: 0;
+    }
+
+    nav .toggle.activate span::before{
+        top: 0;
+    }
+
+    header .container{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    header .header-content{
+        margin-top: 100px;
+    }
+
+    header .header-content h1{
+        font-size: 3.2rem;
+        line-height: 3.8rem;
+    }
+    header .header-content h1:nth-child(3){
+        font-size: 3rem;
+        letter-spacing: -2px;
+        font-weight: 600;
+    }
+
+    section.services .services-content .services-heading{
+        width: 55%;
+        /* margin: 0 auto;
+        text-align: center; */
+    }
+
+    section.services .services-content .services-items{
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin: 70px auto;
+    }
+
+    section.services .services-content .services-items .services-item .icon img{
+        width: 20%;
+    }
+
+    section.projects .projects-content{
+        width: 100%;
+        margin: 30px auto;
+    }
+    /* section.projects .projects-content .projects-heading{
+        text-align: center;
+    } */
+    
+    section.projects .projects-content .projects-items{
+        /* display: grid;
+        grid-template-rows: repeat(5,1fr); */
+        margin: 50px 0;
+    }
+
+    section.about-me .about-container{
+        width: 82%;
+        /* display: grid; */
+        /* grid-template-columns: repeat(3,1fr); */
+        gap: 0;
+        margin: 250px auto;
+    }
+
+    section.about-me .about-container .about-img-content{
+        /* grid-column: span 2;
+        background-image: url(imgs/img-2.png); */
+        width: 90%;
+        min-height: 400px;
+        /* background-size: cover;
+        background-position: center;
+        position: relative;
+        outline: 10px solid white; */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+
+    a.button {
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem;
+        padding: 10px 30px;
+        margin-top: 30px;
+        font-weight: 400;
+    }
+    h2.title {
+        font-size: 2.3rem;
+        letter-spacing: 0.12rem;
+    }
+
+    header .container{
+        margin: 0 auto;
+        width: 82%;
+    }
+
+    header .header-content{
+        margin-top: 50px;
+    }
+    header .header-content h1{
+        font-size: 2.6rem;
+        line-height: 2.9rem;
+    }
+    header .header-content h1:nth-child(3){
+        font-size: 2.2rem;
+        letter-spacing: -2px;
+    }
+
+    section.services .services-content{
+        padding: 100px 10px;
+    }
+
+    section.services .services-content .services-heading{
+        width: 100%;
+    }
+
+    section.services .services-content .services-heading p{
+        letter-spacing: 0.02rem;
+        margin-bottom: 70px;
+    }
+
+    section.services .services-content .services-items{
+        width: 84%;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        gap: 20px;
+    }
+
+    section.services .services-content .services-items .services-item .icon img{
+        width: 15%;
+    }
+
+    section.projects .projects-content{
+        width: 100%;
+        margin: 0
+    }
+
+    section.projects .projects-content .projects-items{
+        gap: 50px;
+        width: 85%;
+        margin: 30px auto;
+    }
+
+    section.projects .projects-content .projects-items .projects-item{
+        /* display: grid;*/
+        grid-template-rows: repeat(2,1fr) !important;
+        display: grid;
+        border-radius: 10px;
+    }
+
+    section.projects .projects-content .projects-items .projects-item div{
+        grid-column: span 2;
+    }
+
+    section.projects .projects-content .projects-items .projects-item .project-info{
+        padding: 20px 20px;
+    }
+
+    section.projects .projects-content .projects-items .project-info h3 {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    section.about-me .about-container{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        margin: 0 auto !important;
+        gap: 0;
+        
+    }
+    section.about-me .about-container .about-img-content{
+        width: 47%;
+        min-height: 480px;
+        flex: 1;
+        margin: 0 auto;
+        background-position: center top;
+        outline: 10px solid white;
+    }
+    section.about-me .about-container .about-img-content::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 4%;
+    left: -14%;
+    border: 7px solid crimson;
+    z-index: -1;
+    }
+    
+    section.about-me .about-container .about-text-content{
+       flex: 2;
+       width: 90%;
+       margin: 0 auto;
+       text-align: center;
+       margin-top: 80px;
+    }
+    section.about-me .about-container .about-text-content p{
+        text-align: center;
+    }
+
+    section.about-me .about-container .about-text-content .button{
+        margin-top: 50px;
+        color: black;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    section.contact .contact-container{
+        margin: 50px auto;
+        
+    }
+    section.contact .contact-content .contact-card img{
+        width: 55%;
+    }
+
+    section.contact .contact-container h2{
+        margin-top: 150px;
+    }
+
+    section.contact .contact-container .contact-content{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px !important;
+    }
+
+    footer .footer-container{
+        width: 70%;
+    }
+
+    footer .footer-container h2{
+        font-size: 1.5rem;
+    }
+
+    footer .footer-container h3{
+        font-size: 1rem4;
+        margin: 20px 0;
+    }
+    
+    footer .footer-container .footer-icons-box{
+        width: 45%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 680px){
+    section.services .services-content .services-items .services-item .icon img{
+        width: 18%;
+    }
+
+    section.about-me .about-container .about-img-content{
+        min-height: 400px !important;
+    }
+
+    section.contact .contact-content .contact-card img{
+        width: 62%;
+    }
+
+    footer .footer-container .footer-icons-box{
+        width: 55% !important;
+        margin: 0 auto;
+    }
+    
+}
+
+@media only screen and (max-width: 560px){
+    section.services .services-content .services-items .services-item .icon img{
+        width: 20%;
+    }
+
+    section.about-me .about-container .about-img-content{
+        min-height: 330px !important;
+    }
+
+    section.contact .contact-content .contact-card img{
+        width: 70%;
+    }
+
+    footer .footer-container .footer-icons-box{
+        width: 60% !important;
+        margin: 0 auto;
+    }
+    
+}
+
+
+
